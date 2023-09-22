@@ -1,0 +1,48 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "namingPrefix": {
+      "value": "virtualmachines"
+    },
+    "environmentName": {
+      "value": "prod"
+    },
+    "location": {
+      "value": "eastus"
+    },
+    "adminUsername": {
+      "value": "incycleAdmin"
+    },
+    "adminPasswordOrKey": {
+      "value": "74*C5tQy619@2K22"
+    },
+    "authType": {
+      "value": "password"
+    },
+    "windowsOsOffer": {
+      "value": "windowsserverdotnet"
+    },
+    "windowsOsSku": {
+      "value": "ws2019-dotnetcore-2-2"
+    },
+    "osDiskType": {
+      "value": "StandardSSD_LRS"
+    },
+    "vmSize": {
+      "value": "Standard_B1s"
+    },
+    "numberOfVMs": {
+      "value": 4
+    },
+    "globalTags": {
+      "value": {
+        "CostCenter": "1247",
+        "Department": "Digital Innovation",
+        "Owner": "hamza.ahmad",
+        "Template C": "prod",
+        "ProjectName": "WAF Template C"
+      }
+    }
+  }
+}
