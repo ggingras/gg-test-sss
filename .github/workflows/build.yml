@@ -1,0 +1,20 @@
+name: build
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - '*'
+  pull_request:
+
+jobs:
+  build:
+    runs-on: unbuntu-latest
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: init
+        run: |
+          bash echo ${{ vars.TEST }}
