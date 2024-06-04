@@ -17,7 +17,9 @@ jobs:
 
       - name: init
         run: |
-          echo "$TEST"
+          eval eval "paramArray=($PARAMETERS)"
+          echo "$paramArray[@]"
         env:
+          PARAMETERS: ${{ vars.PARAMETERS }}
           SUB_TEST: ${{ vars.SUB_TEST }}
           TEST: ${{ vars.TEST }}
