@@ -19,4 +19,5 @@ jobs:
         run: |
           echo "$TEST"
         env:
+          SUB_TEST: ${{ vars.SUB_TEST }}
           TEST: ${{ vars.TEST }}
