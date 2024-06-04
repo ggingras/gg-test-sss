@@ -17,6 +17,6 @@ jobs:
 
       - name: init
         run: |
-          bash echo "$TEST"
+          echo "$TEST"
         env:
           TEST: ${{ vars.TEST }}
