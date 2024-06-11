@@ -19,6 +19,7 @@ jobs:
         run: |
 
           PARAMETERS="Sub=($SUB_TEST) Test=($TEST)"
+          echo $PARAMETERS
         env:
           SUB_TEST: ${{ vars.SUB_TEST }}
           TEST: ${{ vars.TEST }}
