@@ -36,6 +36,7 @@ jobs:
       - name: test node
         run: |
           node --version
+          echo $SHELL
           
       - name: Check for dockerenv file
         run: (ls /.dockerenv && echo Found dockerenv) || (echo No dockerenv)
