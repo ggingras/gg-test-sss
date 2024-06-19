@@ -24,10 +24,9 @@ jobs:
       - name: checkout
         uses: actions/checkout@v4
 
-      - name: init
+      - name: check folder
         run: |
-          PARAMETERS="Sub='$SUB_TEST' Test='$TEST' Secret='$SECRET'"
-          echo $PARAMETERS
+          ls
         env:
           SUB_TEST: ${{ vars.SUB_TEST }}
           TEST: ${{ vars.TEST }}
