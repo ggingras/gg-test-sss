@@ -26,6 +26,8 @@ jobs:
 
       - name: check folder
         run: |
+          echo " Github workspace :  ${{ github.workspace }}"
+          echo "current dir : $PWD"
           ls
         env:
           SUB_TEST: ${{ vars.SUB_TEST }}
