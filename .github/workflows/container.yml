@@ -32,6 +32,10 @@ jobs:
           SUB_TEST: ${{ vars.SUB_TEST }}
           TEST: ${{ vars.TEST }}
           SECRET: ${{ secrets.SECRET }}
+
+      - name: test node
+        run: |
+          node --version
           
       - name: Check for dockerenv file
         run: (ls /.dockerenv && echo Found dockerenv) || (echo No dockerenv)
