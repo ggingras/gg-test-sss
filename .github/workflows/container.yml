@@ -27,7 +27,7 @@ jobs:
       - name: Test If Condition
         if: ${{ vars.UNSET || 'Default' }} == 'default'
         run: |
-          echo "step ran"
+          echo "step ran : $UNSET"
         env:
           UNSET: ${{ vars.UNSET || 'Default' }}
 
