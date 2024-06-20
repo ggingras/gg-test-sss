@@ -33,7 +33,7 @@ jobs:
         env:
           SUB_TEST: ${{ vars.SUB_TEST }}
           TEST: ${{ vars.TEST }}
-          UNSET: ${{ vars.TEST || 'Default' }}
+          UNSET: ${{ vars.UNSET || 'Default' }}
           SECRET: ${{ secrets.SECRET }}
 
       - name: test node
