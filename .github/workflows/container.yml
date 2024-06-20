@@ -25,9 +25,11 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Test If Condition
-        if: ${{ vars.UNSET || 'Default' == 'default' }}
         run: |
-          echo "step ran : $UNSET"
+          if [[ "$UNSET" == "default" ]]; then
+            echo "step ran : $UNSET"
+          fi
+          exit 0
         env:
           UNSET: ${{ vars.UNSET || 'Default' }}
 
