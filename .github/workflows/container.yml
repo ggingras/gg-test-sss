@@ -24,6 +24,13 @@ jobs:
       - name: checkout
         uses: actions/checkout@v4
 
+      - name: Test If Condition
+        if: ${{ vars.UNSET || 'Default' }} == 'default'
+        run: |
+          echo "step ran"
+        env:
+          UNSET: ${{ vars.UNSET || 'Default' }}
+
       - name: check folder
         run: |
           echo "unset value : $UNSET"
