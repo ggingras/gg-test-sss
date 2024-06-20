@@ -26,12 +26,14 @@ jobs:
 
       - name: check folder
         run: |
+          echo "unset value : $UNSET"
           echo " Github workspace :  ${{ github.workspace }}"
           echo "current dir : $PWD"
           ls
         env:
           SUB_TEST: ${{ vars.SUB_TEST }}
           TEST: ${{ vars.TEST }}
+          UNSET: ${{ vars.TEST, 'Default' }}
           SECRET: ${{ secrets.SECRET }}
 
       - name: test node
